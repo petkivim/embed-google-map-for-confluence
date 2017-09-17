@@ -1,0 +1,146 @@
+<atlassian-plugin key="com.pkrete.embed-google-map"
+	name="Embed Google Map" plugins-version="2">
+	<plugin-info>
+		<description>Macro to embed a Google Map in the page. No Google Maps API key is required.</description>
+		<version>2.1</version>
+		<vendor name="Petteri Kivimäki" url="http://www.linkedin.com/in/pkivimaki" />
+		<param name="atlassian-data-center-compatible">true</param>
+		<!-- Support for the following marketing assets has been implemented -->
+		<param name="plugin-icon">images/icon.png</param>
+		<param name="plugin-logo">images/logo.png</param>
+		<param name="plugin-banner">images/banner.png</param>
+	</plugin-info>
+
+	<xhtml-macro name="google-map"
+		class="com.pkrete.embedgooglemap.EmbedGoogleMap" key="google-map"
+		icon="/download/resources/com.pkrete.embed-google-map/images/logo.png">
+		<description>Macro to embed a Google Map in the page. No Google Maps
+			API key is required.
+		</description>
+		<category name="external-content" />
+		<parameters>
+			<parameter name="address" type="string" />
+			<parameter name="map_type" type="enum" default="normal">
+				<value name="normal" />
+				<value name="satellite" />
+				<value name="hybrid" />
+				<value name="terrain" />
+			</parameter>
+			<parameter name="zoom_level" type="enum" default="14">
+				<value name="0" />
+				<value name="1" />
+				<value name="2" />
+				<value name="3" />
+				<value name="4" />
+				<value name="5" />
+				<value name="6" />
+				<value name="7" />
+				<value name="8" />
+				<value name="9" />
+				<value name="10" />
+				<value name="11" />
+				<value name="12" />
+				<value name="13" />
+				<value name="14" />
+				<value name="15" />
+				<value name="16" />
+				<value name="17" />
+				<value name="18" />
+				<value name="19" />
+				<value name="20" />
+				<value name="21" />
+			</parameter>
+			<parameter name="language" type="enum" default="English">
+				<value name="Undefined" />
+				<value name="Arabic" />
+				<value name="Basque" />
+				<value name="Bengali" />
+				<value name="Bulgarian" />
+				<value name="Catalan" />
+				<value name="Chinese (simplified)" />
+				<value name="Chinese (traditional)" />
+				<value name="Croatian" />
+				<value name="Czech" />
+				<value name="Danish" />
+				<value name="Dutch" />
+				<value name="English" />
+				<value name="English (Australian)" />
+				<value name="English (Great Britain)" />
+				<value name="Farsi" />
+				<value name="Filipino" />
+				<value name="Finnish" />
+				<value name="French" />
+				<value name="Galician" />
+				<value name="German" />
+				<value name="Greek" />
+				<value name="Gujarati" />
+				<value name="Hebrew" />
+				<value name="Hindi" />
+				<value name="Hungarian" />
+				<value name="Indonesian" />
+				<value name="Italian" />
+				<value name="Japanese" />
+				<value name="Kannada" />
+				<value name="Korean" />
+				<value name="Latvian" />
+				<value name="Lithuanian" />
+				<value name="Malayalam" />
+				<value name="Marathi" />
+				<value name="Norwegian" />
+				<value name="Norwegian Nynorsk" />
+				<value name="Oriya" />
+				<value name="Polish" />
+				<value name="Portuguese" />
+				<value name="Portuguese (Brazil)" />
+				<value name="Portuguese (Portugal)" />
+				<value name="Romanian" />
+				<value name="Romansch" />
+				<value name="Russian" />
+				<value name="Slovak" />
+				<value name="Slovenian" />
+				<value name="Serbian" />
+				<value name="Spanish" />
+				<value name="Swedish" />
+				<value name="Tagalog" />
+				<value name="Tamil" />
+				<value name="Telugu" />
+				<value name="Thai" />
+				<value name="Turkish" />
+				<value name="Ukrainian" />
+				<value name="Vietnamese" />
+			</parameter>
+			<parameter name="height" type="string" default="300" />
+			<parameter name="width" type="string" default="400" />
+			<parameter name="border" type="enum" default="0">
+				<value name="0" />
+				<value name="1" />
+				<value name="2" />
+				<value name="3" />
+				<value name="4" />
+				<value name="5" />
+			</parameter>
+			<parameter name="border_style" type="enum" default="0">
+				<value name="none" />
+				<value name="hidden" />
+				<value name="dotted" />
+				<value name="dashed" />
+				<value name="solid" />
+				<value name="double" />
+			</parameter>
+			<parameter name="border_color" type="string" default="#000000" />
+			<parameter name="link" type="boolean" default="false" />
+			<parameter name="link_label" type="string" default="View Larger Map" />
+			<parameter name="link_full" type="boolean" default="false" />
+			<parameter name="show_info" type="boolean" default="true" />
+			<parameter name="info_label" type="string" default="" />
+			<parameter name="https" type="boolean" default="true" />
+		</parameters>
+	</xhtml-macro>
+
+	<resource type="i18n" name="i18n"
+		location="com.pkrete.embedgooglemap.embed-google-map" />
+
+	<resource type="download" name="images/" location="images">
+		<param name="content-type" value="image/png" />
+	</resource>
+</atlassian-plugin>
